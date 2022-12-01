@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_items",
+  "info": {
+    "singularName": "order-item",
+    "pluralName": "order-items",
+    "displayName": "order-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pizza_name": {
+      "type": "string"
+    },
+    "pizza_size": {
+      "type": "float"
+    },
+    "toppings_name": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "float"
+    },
+    "unit_price": {
+      "type": "float"
+    },
+    "dough_name": {
+      "type": "string"
+    },
+    "dough_price": {
+      "type": "float"
+    },
+    "order_id": {
+      "type": "float",
+      "required": false,
+      "unique": true
+    }
+  }
+}

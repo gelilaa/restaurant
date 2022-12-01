@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pizzas",
+  "info": {
+    "singularName": "pizza",
+    "pluralName": "pizzas",
+    "displayName": "pizza",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price_small": {
+      "type": "float"
+    },
+    "price_medium": {
+      "type": "float"
+    },
+    "price_large": {
+      "type": "float"
+    },
+    "topping": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topping.topping",
+      "inversedBy": "pizzas"
+    }
+  }
+}
